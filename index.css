@@ -24,7 +24,7 @@ input[type=text] {
   border-radius: 4px;
 }
 
-input[type=submit] {
+button[type=submit] {
   width: 100%;
   background-color: blue;
   color: white;
