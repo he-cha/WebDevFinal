@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -12,12 +12,16 @@
 		<div id="root"></div>
 		<h1></h1>
 		<form>
-			<label id="header">User Login</label>
-			<label>Username</label>
-			<input id="username"type="text">
-			<label >Password</label>
-			<input id="password" type="password">
-			<button id="submit" value="submit"></button>
+			<h2 id="header">User Login</h2>
+			<div>
+				<label for="username">Username</label>
+				<input id="username" type="text">
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input id="password" type="text">
+			</div>
+			<button id="login" type="button" value="submit">Log in</button>
 		</form>
 		
 		<script type="module" src="index.js"></script>
