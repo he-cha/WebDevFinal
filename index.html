@@ -17,19 +17,21 @@
 			</nav>
 		</header>
 		<div id="root"></div>
-		<form action="https://localhost:3000/login" method="POST" name="login">
-		<!-- ^ idk if that action link is right, it is my best guess at the moment -->
-			<h2 id="header">User Login</h2>
-			<div>
-				<label for="username">Username</label>
-				<input id="username" type="text" name="username">
-			</div>
-			<div>
-				<label for="password">Password</label>
-				<input id="password" type="text" name="password">
-			</div>
-			<button id="login" type="submit" value="submit">Log in</button>
-		</form>
+		<div class="login">
+			<form action="https://localhost:3000/login" method="POST" name="login">
+			<!-- ^ idk if that action link is right, it is my best guess at the moment -->
+				<h2 id="header">User Login</h2>
+				<div>
+					<label for="username">Username</label>
+					<input id="username" type="text" name="username">
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input id="password" type="text" name="password">
+				</div>
+				<button id="login" type="submit" value="submit">Log in</button>
+			</form>
+		</div>
 		
 		<script type="module" src="index.js"></script>
 	</body>
