@@ -8,9 +8,17 @@ h1 {}
 h2 {}
 */
 
+div.login {
+    background-color: powderblue;
+    width: 50%;
+    padding: 12px 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
 input[type=text] {
   width: 75%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: auto;
   box-sizing: border-box;
 }
