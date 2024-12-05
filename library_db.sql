@@ -59,7 +59,7 @@ INSERT INTO `books` VALUES ('Gone with the Wind','Margaret Mitchell',1936,'Class
   ('The Cat in the Hat','Dr. Seuss',1957,'Comedy',36,NULL,1),
   ('1984','George Orwell',1949,'Dystopian',328,NULL,1),
   ('Gone Girl','Gillian Flynn',2012,'Mystery',432,NULL,1),
-  ('A Midsummer Night's Dream','William Shakespeare',1600,'Classic',83,NULL,1),
+  ('A Midsummer Nights Dream','William Shakespeare',1600,'Classic',83,NULL,1),
   ('Divergent','Veronica Roth',2011,'Dystopian',487,NULL,1),
   ('The Maze Runner','James Dashner',2009,'Dystopian',375,NULL,1),
   ('The Scorch Trials','James Dashner',2010,'Dystopian',360,NULL,1),
@@ -67,7 +67,7 @@ INSERT INTO `books` VALUES ('Gone with the Wind','Margaret Mitchell',1936,'Class
   ('The Firm','John Grisham',1991,'Mystery',432,NULL,1),
   ('The Lightning Thief','Rick Riordan',2005,'Fantasy',377,NULL,1),
   ('The Sea of Monsters','Rick Riordan',2006,'Fantasy',279,NULL,1),
-  ('The Titan's Curse','Rick Riordan',2007,'Fantasy',312,NULL,1),
+  ('The Titans Curse','Rick Riordan',2007,'Fantasy',312,NULL,1),
   ('The Battle of the Labyrinth','Rick Riordan',2008,'Fantasy',361,NULL,1),
   ('The Last Olympian','Rick Riordan',2009,'Fantasy',381,NULL,1);
 /*!40000 ALTER TABLE `books` ENABLE KEYS */;
