@@ -3,6 +3,7 @@ will use list of books' data from db to write a react component
 that can be rendered into index.ejs using index.js
 */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './BookList.css'; // Import Booklist CSS
 
 const BookList = () => {
@@ -49,7 +50,11 @@ const handleCheckout = (bookTitle) => {
                         <div className="book-card" key={book.title}>
                             {/* Book Title and Checkout Button */}
                             <div className="book-title">
-                                <h3>{book.title}</h3>
+                                <h3>
+                                    <Link to={`/booklist/bookinfo/${encodeURIComponent(book.title)}`}>
+                                        {book.title}
+                                    </Link>
+                                </h3>
                                 {/* Hover effect to show more details */}
                                 <div className="book-popup">
                                     <p><strong>Title: </strong> {book.title}</p>
@@ -75,6 +80,3 @@ const handleCheckout = (bookTitle) => {
 };
 
 export default BookList;
-
-
-
