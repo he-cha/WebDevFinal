@@ -171,13 +171,6 @@ const handleCheckout = (bookTitle) => {
                                     <p><strong>Pages: </strong> {book.pages}</p>
                                 </div>
                             </div>
-
-                            {/* Checkout button (only visible by default) */}
-                            {book.instock && (
-                                <button onClick={() => handleCheckout(book.title)}>
-                                    Check Out
-                                </button>
-                            )}
                         </div>
                     ))}
                 </div>
