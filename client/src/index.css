@@ -2,6 +2,37 @@
     a nice neutral gray: #f2f2f2;
 */
 
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  background: #9f6314;
+}
+
+header h1 {
+  font: small-caps bold 24px/40px Georgia, serif;
+  color: #FFFAF0;
+  text-align: center;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #9f6314;
+}
+
+body {
+  font: 14px Arial, sans-serif;
+  color: black;
+  background-color: #FFFAF0;
+}
+
+/* 
+h1 {}
+
+h2 {}
+*/
+
 nav a {
   float: left;
   display: block;
@@ -12,27 +43,17 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #ddd;
+  background-color: #fff7e6;
   color: black;
 }
 
-body {
-    font-family: serif;
-}
-
-/* 
-h1 {}
-
-h2 {}
-*/
-
 div.login {
-    background-color: powderblue;
-    width: 50%;
-    padding: 20px;
-    margin: auto;
-    box-sizing: border-box;
-    border-radius: 5px;
+  background-image: linear-gradient(to bottom left, #99CCFF #6699FF);
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
 input[type=text] {
@@ -48,9 +69,10 @@ input[type=text]:focus {
 }
 
 button[type=submit] {
-  width: 100%;
-  background-color: blue;
-  color: white;
+  width: 25%;
+  text-align: center;
+  background-color: lightgray;
+  color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -59,5 +81,5 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-  background-color: #45a049;
+  background-color: gray;
 }
