@@ -156,7 +156,11 @@ const handleCheckout = (bookTitle) => {
                         <div className="book-card" key={book.title}>
                             {/* Book Title and Checkout Button */}
                             <div className="book-title">
-                                <h3>{book.title}</h3>
+                                <h3>
+                                    <Link to={`/booklist/bookinfo/${encodeURIComponent(book.title)}`}>
+                                        {book.title}
+                                    </Link>
+                                </h3>
                                 {/* Hover effect to show more details */}
                                 <div className="book-popup">
                                     <p><strong>Title: </strong> {book.title}</p>
