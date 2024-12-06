@@ -14,6 +14,7 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<Login />} /> 
+                    <Route path="/" element={<BookList />} />
                 </Routes>
             </div>
         </Router>
