@@ -1,4 +1,5 @@
-// uses react to render <App /> but App.js doesn't exist yet
+// uses react to render components like <App /> 
+// but App.js doesn't exist yet
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
