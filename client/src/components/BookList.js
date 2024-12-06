@@ -34,11 +34,11 @@ const BookList = () => {
 
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
-            {books.length === 0 ? (
-                <p>No books available</p>
+            {books.length === 0 ? ( //check amount of books; if 0 -> print no books available; if 1+ -> list the books wiht book-grid
+                <p>No books available</p> 
             ) : (
                 <div className="book-grid"> //have its own .css formatting for rows
-                    {books.map((book) => (
+                    {books.map((book) => ( //this may need tweaking to get it how we want it formatted; same with booklist.css
                         <div className="book-card" key={book.title}>
                             <h3>{book.title}</h3>
                             <p><strong>Author:</strong> {book.author}</p>
