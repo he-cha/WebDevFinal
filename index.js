@@ -15,7 +15,8 @@ root.render(
 
 /*
 // renders book list table into index.ejs and uses app.listen(3000)
-// but that may be unnecessary because server.js also has an app.listen()
+// but some of the code below may be redundant because server.js also has an app.listen()
+// and server.js uses db to verify login info through(?) index.ejs 
 
 import express from 'express';
 const app = express();
