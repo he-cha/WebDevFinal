@@ -7,6 +7,8 @@ const port = 3000;
 
 const db = mysql.createConnection({
    host: 'localhost',
+   user: 'root',
+   password: '',
    database: 'library_db'
 
 });
@@ -20,7 +22,7 @@ db.connect((err) => {
 });
 
 app.use(express.urlencoded({extended: true}));
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
    res.render('index');
 })
@@ -37,7 +39,7 @@ app.post('/login', (req, res) => {
          res.send('Login Successful');
       }
       else{
-         res.send('Index', {errorMessage: 'Invalid username or password'})
+         res.send('Login Failed. Invalid username or password');
       }
    });
 });
