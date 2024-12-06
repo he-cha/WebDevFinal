@@ -28,33 +28,44 @@ const BookList = () => {
         fetchBooks();
     }, []); // Run only once on component mount
 
+//checkout schnan
+const handleCheckout = (bookTitle) => {
+        // for now, just alert the title that is being checked out
+        // not lots of functionality
+        alert(`Checking out: ${bookTitle}`);
+    };
+
     return (
         <div className="book-list">
             <h2>Available Books</h2>
 
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
-            {books.length === 0 ? ( //check amount of books; if 0 -> print no books available; if 1+ -> list the books wiht book-grid
-                <p>No books available</p> 
+            {books.length === 0 ? (
+                <p>No books available</p>
             ) : (
-                <div className="book-grid"> //have its own .css formatting for rows
-                    {books.map((book) => ( //this may need tweaking to get it how we want it formatted; same with booklist.css
+                <div className="book-grid">
+                    {books.map((book) => (
                         <div className="book-card" key={book.title}>
-                            <h3>{book.title}</h3>
-                            <p><strong>Author:</strong> {book.author}</p>
-                            <p><strong>Year:</strong> {book.date}</p>
-                            <p><strong>Genre:</strong> {book.genre}</p>
-                            <p><strong>Pages:</strong> {book.pages}</p>
-                            <p><strong>Stock Status:</strong> {book.instock ? "In Stock" : "Out of Stock"}</p>
-                            
-                            //if book is instock, make button to checkout
-                            //DOESNT WORK
+                            {/* Book Title and Checkout Button */}
+                            <div className="book-title">
+                                <h3>{book.title}</h3>
+                                {/* Hover effect to show more details */}
+                                <div className="book-popup">
+                                    <p><strong>Title: </strong> {book.title}</p>
+                                    <p><strong>Author: </strong> {book.author}</p>
+                                    <p><strong>Year: </strong> {book.date}</p>
+                                    <p><strong>Genre: </strong> {book.genre}</p>
+                                    <p><strong>Pages: </strong> {book.pages}</p>
+                                </div>
+                            </div>
+
+                            {/* Checkout button (only visible by default) */}
                             {book.instock && (
-                                <button type="submit" onClick={() => handleCheckout(book.title)}>
+                                <button onClick={() => handleCheckout(book.title)}>
                                     Check Out
                                 </button>
                             )}
-
                         </div>
                     ))}
                 </div>
