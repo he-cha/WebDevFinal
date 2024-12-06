@@ -15,8 +15,8 @@ does root.render here assume it's rendering into .html?
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-// ^ App.js doesn't exist yet (will fail to render below)
+// import BookList from 'BookList.js';      code not written yet
+// import App from './App';              App.js doesn't exist yet
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
