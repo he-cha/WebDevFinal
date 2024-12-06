@@ -37,3 +37,21 @@
 .book-card strong {
     font-weight: bold;
 }
+
+/*button for checking out book (if it's in stock)    |    ripped from index.css; we can format accordingly
+  this should submit a form on press so we need to send username in that form IF we want to track who currently has what book (by username)*/
+.book-card button[type=submit] { 
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*hover for book button*/
+.book-card button[type=submit]:hover {
+  background-color: #45a049;
+}
