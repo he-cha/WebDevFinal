@@ -1,26 +1,47 @@
-const { createServer } = require('node:http');
-const fs = require('fs');
-
 const express = require("express");
 const app = express();
+const mysql = require('mysql2');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
-const server = createServer((req, res) => {
-   res.statusCode = 200;
-   res.setHeader('Content-Type', 'text/html');
-   fs.readFile('index.html', function(error, data){
-      if (error) {
-         res.writeHead(404);
-         res.write('Error: file not found');
-      }else{
-         res.write(data);
+const db = mysql.createConnection({
+   host: 'localhost',
+   database: 'library_db'
+
+});
+
+db.connect((err) => {
+   if(err) {
+      console.error('Error connecting to the db');
+      return;
+   }
+   console.log('connected to db')
+});
+
+app.use(express.urlencoded({extended: true}));
+app.set('view engine', 'ejs')
+app.get('/', (req, res) => {
+   res.render('index');
+})
+
+app.post('/login', (req, res) => {
+   const {username, password} = req.body;
+   db.query('SELECT * FROM user_info WHERE username = ? AND password = ?', [username, password], (err, result)=>{
+      if(err){
+         res.send('Database login error')
+         return;
       }
-     res.end();
+   
+      if(result.length > 0){
+         res.send('Login Successful');
+      }
+      else{
+         res.send('Index', {errorMessage: 'Invalid username or password'})
+      }
    });
 });
 
-server.listen(port, hostname, () => {
+app.listen(port, hostname, () => {
    console.log(`Server running at http://${hostname}:${port}/`);
 });
