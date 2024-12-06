@@ -15,18 +15,14 @@ root.render(
 );
 
 /*
-// renders book list table into index.ejs and uses app.listen(3000)
-// but some of the code below may be redundant because server.js also has an app.listen()
-// and server.js uses db to verify login info through(?) index.ejs 
+// gets book list from db and renders book info table in index.ejs 
+TO DO: put code in server.js since express and ejs are already initialized there
+    ++ change destination from index.ejs to BookList.js component file
 
-import express from 'express';
-const app = express();
-
-// "set EJS as the templating engine"
-app.set('view engine', 'ejs');
+       ? export BookList from BookList.js straight into index.ejs
+       OR use server.js to import BookList.js and render into index.ejs ???
 
 // TO DO: store books from db into this list
-// OR find another way to deliver book list to res.render below
 const books = []
 
 app.get('/home', (req, res) => {
@@ -34,7 +30,11 @@ app.get('/home', (req, res) => {
     res.render('index.ejs', { books: books });
 })
 
-// Server setup 
+
+// redundant code that's also in server.js:
+import express from 'express';
+const app = express();
+app.set('view engine', 'ejs');
 app.listen(3000, function (req, res) { 
     console.log("Connected on port:3000"); 
 });
