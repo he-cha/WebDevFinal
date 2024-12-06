@@ -1,7 +1,21 @@
-// renders index.ejs and uses app.listen(3000)
-// but that may be unnecessary because server.js also has an app.listen()
+// uses react to render <App \> but App.js doesn't exist yet
 
-// section towards the bottom uses react to render <App \> but App.js doesn't exist yet
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+// ^ App.js doesn't exist yet (will fail to render below)
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
+
+/*
+// renders book list table into index.ejs and uses app.listen(3000)
+// but that may be unnecessary because server.js also has an app.listen()
 
 import express from 'express';
 const app = express();
@@ -22,17 +36,4 @@ app.get('/home', (req, res) => {
 app.listen(3000, function (req, res) { 
     console.log("Connected on port:3000"); 
 });
-
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-// ^ App.js doesn't exist yet (will fail to render below)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-);
+*/
