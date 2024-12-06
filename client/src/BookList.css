@@ -20,6 +20,13 @@
     text-align: left;
 }
 
+/* book cover properties */
+.book-card img {
+    width: 150px;  /* Adjust this value to your preferred width */
+    height: 225px; /* Adjust this value to your preferred height */
+    object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+}
+
 /*Show book itle*/
 .book-title {
     position: relative;
