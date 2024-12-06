@@ -48,6 +48,7 @@ const BookList = () => {
                             <p><strong>Stock Status:</strong> {book.instock ? "In Stock" : "Out of Stock"}</p>
                             
                             //if book is instock, make button to checkout
+                            //DOESNT WORK
                             {book.instock && (
                                 <button type="submit" onClick={() => handleCheckout(book.title)}>
                                     Check Out
