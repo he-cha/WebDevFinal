@@ -5,6 +5,8 @@ const Login = () => {
     const [password, setPassword] = useState("");    // This manages the password input
     const [errorMessage, setErrorMessage] = useState("");  // This manages the error message
 
+    const navigate = useNavigate();  // Initialize navigate function
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -22,7 +24,7 @@ const Login = () => {
         // Check if the response is successful or not
         if (response.ok) {
             console.log("Login successful");
-            // Here, you can redirect the user to another page or update the state
+            navigate('/BookList');
         } else {
             // If the response is not successful, set the error message
             setErrorMessage(db_data.error || "Unknown error");
