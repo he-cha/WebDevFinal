@@ -48,7 +48,7 @@ nav a:hover {
 }
 
 div.login {
-  background-image: linear-gradient(to bottom left, #99CCFF, #6699FF);
+  background-image: linear-gradient(190deg, #99CCFF, #6699FF);
   width: 50%;
   padding: 20px;
   margin: auto;
