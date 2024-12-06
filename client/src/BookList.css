@@ -1,0 +1,39 @@
+/* book list container style */
+.book-list {
+    padding: 20px;
+    text-align: center;
+}
+
+/* container for all book cards */
+.book-grid {
+    display: flex; /* use flexbox to display books horizontally */
+    flex-wrap: wrap; /* allow wrapping to new rows if needed */
+    justify-content: center; /* center-align items horizontally */
+    gap: 20px; /* add space between the items */
+}
+
+/* style for individual book cards */
+.book-card {
+    background-color: #f4f4f4; /* light background for cards */
+    border: 2px solid #ddd; /* border around each card 2 pixels */
+    padding: 20px;
+    border-radius: 8px; /* rounded corners */
+    width: 250px; /* fixed width for each book card */
+    text-align: left;
+}
+
+/* style for book titles */
+.book-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* style for book details */
+.book-card p {
+    margin: 8px 0;
+}
+
+/* style for book authors and other details */
+.book-card strong {
+    font-weight: bold;
+}
