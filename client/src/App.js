@@ -9,9 +9,6 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <header>
-                    <h1>Library Catalog</h1>
-                </header>
 
                 <Routes>
                     <Route path="/" element={<Login />} /> 
