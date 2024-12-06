@@ -155,7 +155,10 @@ const handleCheckout = (bookTitle) => {
                     {books.map((book) => (
                         <div className="book-card" key={book.title}>
                             {/* Book Title and Checkout Button */}
+
                             <div className="book-title">
+                                //Display the book covers
+                                <img src={getImageForBook(book.title)} alt={book.title} />
                                 <h3>
                                     <Link to={`/booklist/bookinfo/${encodeURIComponent(book.title)}`}>
                                         {book.title}
