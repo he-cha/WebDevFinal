@@ -2,7 +2,7 @@
     a nice neutral gray: #f2f2f2;
 */
 
-.header {
+header {
   text-align: center;
   width: 100%;
   height: auto;
@@ -10,7 +10,7 @@
   background: #9f6314;
 }
 
-.header h1 {
+header h1 {
   font: small-caps bold 24px/40px Georgia, serif;
   color: #FFFAF0;
   text-align: center;
