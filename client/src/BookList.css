@@ -10,10 +10,14 @@
     gap: 20px; /* add space between the items */
 }
 
+body, h2, h3 {
+    color: #002266;
+}
+
 /* style for individual book cards */
 .book-card {
-    background-color: #f4f4f4; /* light background for cards */
-    border: 2px solid #ddd; /* border around each card 2 pixels */
+    background-color: #e6eeff; /* light background for cards */
+    border: 2px solid #b3ccff; /* border around each card 2 pixels */
     padding: 20px;
     border-radius: 8px; /* rounded corners */
     width: 250px; /* fixed width for each book card */
@@ -25,6 +29,10 @@
     width: 150px;  /* Adjust this value to your preferred width */
     height: 225px; /* Adjust this value to your preferred height */
     object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Show book itle*/
@@ -39,7 +47,7 @@
     position: absolute;
     top: 0;
     left: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 34, 102, 0.8);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -73,7 +81,7 @@
   this should submit a form on press so we need to send username in that form IF we want to track who currently has what book (by username)*/
 .book-card button[type=submit] { 
   width: 100%;
-  background-color: blue;
+  background-color: #003cb3;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -84,5 +92,5 @@
 
 /*hover for book button*/
 .book-card button[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #002266;
 }
